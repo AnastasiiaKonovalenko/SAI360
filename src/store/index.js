@@ -1,15 +1,10 @@
 import { createStore } from 'vuex'
+import moduleMovies from './movies.store'
 
 const store = createStore({
-    state () {
-        return {
-            count: 0
-        }
-    },
-    mutations: {
-        increment (state) {
-            state.count++
-        }
+    namespaced: true,
+    modules: {
+        moduleMovies: moduleMovies,
     }
 })
 
