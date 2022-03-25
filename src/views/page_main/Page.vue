@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <div class="flex justify-center p-4 bg-zinc-100">
+    <div class="flex justify-center p-4">
         <MoviesList/>
     </div>
 </template>

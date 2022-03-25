@@ -8,7 +8,7 @@ const routes = [
     component: Main
   },
   {
-    path: '/movie',
+    path: '/movie/:movieId',
     name: 'MoviePage',
     component: () => import('../views/page_movie/Page.vue')
   }

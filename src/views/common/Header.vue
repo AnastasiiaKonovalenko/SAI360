@@ -1,9 +1,9 @@
 <script>
-    import MenuIcon from 'vue-material-design-icons/Menu.vue';
+    import PlusBoxIcon from 'vue-material-design-icons/PlusBox.vue';
     export default {
         name: 'Header',
         components: {
-            MenuIcon
+            PlusBoxIcon
         }
     };
 </script>
@@ -11,13 +11,16 @@
 <template>
     <header class="flex flex-row content-center bg-zinc-700">
         <img
+            @click="$router.push({name: 'Main'})"
             src="../../assets/logo.svg"
             alt="logo"
             class="p-4">
-        <menu-icon
+        <plus-box-icon
+            v-if="$route.name === 'Main'"
             :size="36"
             class="py-4"
-            fillColor="#FFFFFF"/>
+            fillColor="#FFFFFF"
+            @click="$emit('open-film-dialog')"/>
     </header>
 </template>
 
