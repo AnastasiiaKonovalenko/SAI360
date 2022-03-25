@@ -36,7 +36,7 @@
             @set-movie="setMovie($event)"
             :movieItem="movieItem" />
         <h1>{{ movieItem.Title }}</h1>
-        <div class="flex flex-row mt-4">
+        <div class="flex flex-col sm:flex-row mt-4">
             <img
                 class="mr-4"
                 :src="movieItem.Poster"
